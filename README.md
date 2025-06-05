@@ -1,83 +1,94 @@
-# Network-and-CyberSecurity.2
-Cybersecurity Incident Response and Analysis
+#  Network-and-CyberSecurity.2
 
-Introduction
+## Cybersecurity Incident Response and Analysis
 
-This repository contains a detailed analysis of various cybersecurity incidents and their mitigation using industry-standard tools. The project focuses on the implementation and configuration of security tools such as Wazuh, ModSecurity, Snort, Hydra, MXToolBox, and Fail2Ban to detect, prevent, and analyze cyber threats.
+This repository provides hands-on implementation and analysis of common cyber threats, along with defensive configurations using industry-standard tools.
 
-Overview of Tools Used
+---
 
-Wazuh - Open-source security monitoring and log analysis platform.
+## Introduction
 
-ModSecurity - Web Application Firewall (WAF) for protecting web applications.
+This project demonstrates how to detect, prevent, and respond to various cybersecurity incidents using real-world tools like:
 
-Snort - Intrusion Detection System (IDS) to detect network-based attacks.
+- **Wazuh** (SIEM & log analysis)
+- **ModSecurity** (Web Application Firewall)
+- **Snort** (Intrusion Detection System)
+- **Hydra** (Brute-force attack tool)
+- **MXToolBox** (Email spoofing analysis)
+- **Fail2Ban** (SSH intrusion prevention)
 
-Hydra - Brute-force attack tool for password cracking.
+Each tool is configured and tested against specific attack scenarios to evaluate their effectiveness in real-time incident response.
 
-MXToolBox - Online tool for email and DNS analysis.
+---
 
-Fail2Ban - Log analysis tool for banning malicious IPs to prevent SSH and web attacks.
+##  Tools Overview
 
-Incidents Covered
+| Tool         | Description                                                                 |
+|--------------|-----------------------------------------------------------------------------|
+| **Wazuh**    | Open-source platform for log data analysis and threat detection.           |
+| **ModSecurity** | Web Application Firewall to protect against OWASP Top 10 threats.       |
+| **Snort**    | Network-based IDS for traffic monitoring and signature-based detection.     |
+| **Hydra**    | Password-cracking tool for brute-force attacks on various protocols.        |
+| **MXToolBox**| Online tool for email header and DNS analysis, useful for spoofing detection.|
+| **Fail2Ban** | Monitors logs and bans IPs after malicious activity (e.g., failed SSH logins).|
 
-Incident 1: Wazuh and SQL Injection
+---
 
-Wazuh Installation and Configuration
+##  Incidents Covered
 
-SQL Injection Setup Using DVWA
+### Incident 1: Wazuh and SQL Injection
+- Wazuh installation & dashboard configuration  
+- DVWA setup for SQL injection simulation  
+- Detection and alerting of SQLi in real time
 
-Managing Wazuh and its Dashboard Features
+###  Incident 2: ModSecurity and SQL Injection
+-  Simulating SQL injection attacks  
+-  Blocking malicious requests with ModSecurity
 
-Executing SQL Injection Attack and Monitoring with Wazuh
+###  Incident 3: Snort and Hydra (Brute-Force Detection)
+-  Simulating SSH brute-force attacks using Hydra  
+-  Detecting brute-force attempts via Snort rules
 
-Incident 2: ModSecurity and SQL Injection
+### Incident 4: MXToolBox and Email Spoofing
+-  Overview of email spoofing techniques  
+-  Using MXToolBox to analyze spoofed headers
 
-Performing SQL Injection Attacks
+### Incident 5: Fail2Ban and SSH Intrusion Prevention
+-  Monitoring SSH logs  
+-  Automatically banning suspicious IPs using Fail2Ban
 
-Protecting Web Applications Using ModSecurity
+###  Bonus: Medusa Brute-Force Attack
+-  Executing dictionary attacks  
+-  Comparing detection with Hydra attacks
 
-Incident 3: Snort and Hydra (Brute-Force Attack)
+---
 
-Understanding Brute-Force Attacks
+##  Challenges & Learnings
 
-Setting Up and Using Snort for Detection
+Throughout this project, we:
+- Gained practical knowledge of attack vectors like **SQLi**, **brute-force**, and **spoofing**
+- Learned to implement and tune defensive tools
+- Understood alerting mechanisms and traffic inspection
+- Faced real-world issues in log parsing, rule conflicts, and IDS configuration
 
-Incident 4: MXToolBox and Fake Email (Email Spoofing)
+---
 
-Overview of Email Spoofing
+##  Conclusion
 
-Using MXToolBox for Email Analysis
+This project emphasizes the importance of layered security. From web firewalls to log analyzers and IDS systems, every layer adds crucial protection against modern cyber threats.
 
-Incident 5: Fail2Ban and SSH Intrusion Prevention
+Cybersecurity is not just about tools—it's about how we **configure**, **monitor**, and **respond** to threats proactively.
 
-Monitoring SSH Intrusion Attempts
+---
 
-Configuring Fail2Ban for Intrusion Prevention
+## References
 
-Bonus: Medusa Brute-Force Attack
+You can find all references, guides, and documentation links used throughout this project in the [References](./references.md) section.
 
-Executing Brute-Force Attacks with Medusa
+---
 
-Challenges and Learnings
+##  How to Use This Repository
 
-This project highlights real-world cybersecurity threats, emphasizing the importance of monitoring, detection, and prevention mechanisms. Each incident provided valuable insights into the behavior of attacks and effective countermeasures.
+1. **Clone the repository**:
+   git clone https://github.com/Bakhtawar12384/Network-and-CyberSecurity.2
 
-Conclusion
-
-Cybersecurity is an ongoing battle, and implementing robust security measures is essential. The experiments conducted in this project demonstrate the importance of proactive defense mechanisms to safeguard networks and applications.
-
-References
-
-A list of references and resources used throughout the project can be found in the references section of the documentation.
-How to Use This Repository
-
-Clone the repository:
-
-git clone https://github.com/Bakhtawar12384/cybersecurity-incidents.git
-
-Follow the documentation for setting up each tool and replicating incidents.
-
-
-License
-This project is open-source and available under the MIT License.
